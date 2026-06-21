@@ -1,85 +1,86 @@
+<h1 align="center">💾 System Restore Point Manager (PowerShell Toolkit)</h1>
 
-<h1 align = "center" > 💾 System Restore Point Manager (PowerShell Toolkit) </h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/PowerShell-5.1+-blue?logo=powershell&logoColor=white">
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows&logoColor=white">
+  <img src="https://img.shields.io/badge/License-MIT-green">
+  <img src="https://img.shields.io/badge/Status-Finished-brightgreen">
+</p>
 
-Herramienta en PowerShell diseñada para la gestión de puntos de restauración del sistema en Windows, permitiendo crear, consultar y filtrar puntos de restauración desde un menú interactivo en consola.
+## 📖 Descripción
 
-Este toolkit está orientado a tareas básicas de administración del sistema y recuperación.
-<br><br>
-⚙️ ¿Qué es esta herramienta?
+**System Restore Point Manager** es un script interactivo de PowerShell diseñado para facilitar la gestión de puntos de restauración del sistema en Windows. Permite a administradores y usuarios técnicos crear, listar y buscar puntos de restauración desde una consola con menú guiado, sin necesidad de recordar comandos complejos. Ideal para entornos educativos, soporte técnico y administración de sistemas.
 
-Es un gestor interactivo de puntos de restauración que simplifica el uso de comandos del sistema para administración de recuperación de Windows.
+## 🔐 Control de acceso
 
-Incluye control de acceso, menú guiado y operaciones básicas de gestión de restore points.
-<br><br>
-🔐 Control de acceso
+El script incluye un sistema de validación de usuario para restringir el acceso a personal autorizado.
 
-El acceso al toolkit está restringido mediante validación de usuario.
+**Usuario autorizado por defecto:**  
+`Hugo Arcones Martinez`
 
-Usuario autorizado por defecto:
+Si el usuario no coincide, el script finaliza la ejecución automáticamente.
 
-Hugo Arcones Martinez
+## ⚙️ Funcionalidades
 
-Si el usuario no coincide, el script no permite continuar.
-<br><br>
-🧰 Funcionalidades principales
-<br><br>
-🏁 Inicio
-Muestra un resumen de las funciones disponibles
-Explica el propósito del toolkit
-<br><br>
-📌 Crear punto de restauración
-Permite generar un punto de restauración del sistema
-El usuario puede asignar un nombre personalizado
-Usa Checkpoint-Computer con tipo MODIFY_SETTINGS
-<br><br>
-📋 Listar puntos de restauración
-Muestra todos los puntos de restauración disponibles
-Utiliza Get-ComputerRestorePoint
-<br><br>
-🔎 Buscar punto de restauración específico
-Permite filtrar puntos de restauración por nombre
-Consulta basada en entrada del usuario
-<br><br>
+| Módulo | Descripción |
+|--------|-------------|
+| 🏁 **Inicio** | Muestra información del toolkit y sus funciones |
+| 📌 **Crear punto de restauración** | Genera un nuevo punto con nombre personalizado usando `Checkpoint-Computer` |
+| 📋 **Listar puntos** | Muestra todos los puntos de restauración disponibles con `Get-ComputerRestorePoint` |
+| 🔎 **Buscar punto específico** | Filtra puntos de restauración por nombre introducido por el usuario |
+| 🚪 **Salir** | Cierra el script de forma controlada |
 
-🚪 Salir
-Cierre controlado del script
-<br><br>
-🚀 Ejecución
-Guardar el archivo como:
-restore-point-toolkit.ps1
-Ejecutar PowerShell como administrador
-Ejecutar el script:
+## 🚀 Ejecución
+
+```powershell
+# 1. Guarda el archivo como restore-point-toolkit.ps1
+# 2. Abre PowerShell como Administrador
+# 3. Ejecuta el script
+
 .\restore-point-toolkit.ps1
-<br><br>
 ⚠️ Requisitos del sistema
-Windows 10 / Windows 11
-PowerShell 5.0 o superior
-Permisos de administrador (OBLIGATORIO para restore points)
-Sistema con protección de sistema activada
-<br><br>
-🧠 Arquitectura del toolkit
-El script está estructurado en módulos funcionales:
-<br><br>
-🔐 Control de acceso de usuario
-<br><br>
-📋 Menú interactivo en bucle
-<br><br>
-🏁 Módulo de información inicial
-<br><br>
-📌 Creación de puntos de restauración
-<br><br>
-📋 Consulta general de puntos
-<br><br>
-🔎 Búsqueda específica de puntos
-<br><br>
-🚪 Control de salida
-<br><br>
-<br><br>
+Requisito	Detalle
+Sistema operativo	Windows 10 / 11
+PowerShell	Versión 5.0 o superior
+Permisos	Administrador (obligatorio)
+Protección del sistema	Activada (para crear puntos)
+🧠 Arquitectura del script
+text
+System Restore Point Manager
+│
+├── 🔐 Control de acceso de usuario
+│
+├── 📋 Menú interactivo en bucle
+│   │
+│   ├── 🏁 Inicio (información del toolkit)
+│   ├── 📌 Crear punto de restauración
+│   ├── 📋 Listar puntos de restauración
+│   ├── 🔎 Buscar punto por nombre
+│   └── 🚪 Salir
+│
+└── 🛡️ Validaciones y control de errores
 🛡️ Consideraciones importantes
-Requiere privilegios elevados (administrador)
-Depende de la protección del sistema de Windows activada
-Operaciones sensibles sobre recuperación del sistema
-Uso recomendado en entornos controlados
+⚠️ Requiere ejecución como administrador para todas las operaciones
 
-## Diagrama de Flujo 
-<img width="1996" height="2652" alt="diagram (2)" src="https://github.com/user-attachments/assets/11e01af6-bf3a-4388-9b1e-2674cb566f85" />
+🔄 Depende de que la Protección del sistema esté activada en el equipo
+
+📌 Los puntos de restauración se crean con el tipo MODIFY_SETTINGS
+
+🧪 Recomendado para entornos controlados y de prueba
+
+📊 Diagrama de flujo
+<p align="center"> <img src="https://github.com/user-attachments/assets/11e01af6-bf3a-4388-9b1e-2674cb566f85" alt="Diagrama de flujo del toolkit" width="80%"> </p>
+👤 Autor
+Hugo Arco
+Estudiante de SMR | Apasionado por la automatización y administración de sistemas
+GitHub · Gmail
+
+📄 Licencia
+Este proyecto está bajo la licencia MIT.
+Consulta el archivo LICENSE para más información.
+
+⭐ ¿Te ha sido útil?
+Si este toolkit te ha ayudado, ¡no olvides dejar una estrella en GitHub!
+Tu apoyo me motiva a seguir creando herramientas como esta.
+
+<p align="center"> <b>Hecho con ❤️ y PowerShell</b> </p> ```
