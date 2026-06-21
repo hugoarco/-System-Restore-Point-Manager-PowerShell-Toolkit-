@@ -1,3 +1,4 @@
+
 <h1 align = "center" > 💾 System Restore Point Manager (PowerShell Toolkit) </h1>
 
 Herramienta en PowerShell diseñada para la gestión de puntos de restauración del sistema en Windows, permitiendo crear, consultar y filtrar puntos de restauración desde un menú interactivo en consola.
@@ -79,3 +80,6 @@ Requiere privilegios elevados (administrador)
 Depende de la protección del sistema de Windows activada
 Operaciones sensibles sobre recuperación del sistema
 Uso recomendado en entornos controlados
+
+## Diagrama de Flujo 
+<img width="1996" height="2652" alt="diagram (2)" src="https://github.com/user-attachments/assets/11e01af6-bf3a-4388-9b1e-2674cb566f85" />
