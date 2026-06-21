@@ -37,4 +37,4 @@ Si el usuario no coincide, el script finaliza la ejecución automáticamente.
 # 2. Abre PowerShell como Administrador
 # 3. Ejecuta el script
 
-.\restore-point-toolkit.ps1
+.\RestauracionSistema.ps1.
